@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Record | CourseDash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: url('/images/course.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .navbar {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .nav-links li a:hover {
+      color: #facc15;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+      padding: 3rem 1rem;
+    }
+    .form-box {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(14px);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #facc15;
+      font-size: 1.8rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #f1f5f9;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #facc15;
+      color: #1e3a8a;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #fde68a;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">CourseDash</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="data_charts.html">Data</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="create.html">Create</a></li>
+      <li><a href="read.html">Read</a></li>
+      <li><a href="update.html" class="active">Update</a></li>
+      <li><a href="delete.html">Delete</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="form-box">
+      <h2>Update Course Enrollment</h2>
+      <form>
+        <label for="studentId">Student ID</label>
+        <input type="text" id="studentId" placeholder="Enter student ID to update" required>
+
+        <label for="courseName">New Course</label>
+        <select id="courseName">
+          <option value="">Select Course</option>
+          <option>Data Visualization</option>
+          <option>Project Management</option>
+          <option>Big Data</option>
+          <option>Application Development</option>
+        </select>
+
+        <label for="grade">Updated Grade</label>
+        <input type="text" id="grade" placeholder="Enter updated grade (e.g., A, B+)" />
+
+        <button type="submit">Submit Update</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
