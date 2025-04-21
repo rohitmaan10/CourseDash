@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create | CourseDash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-section {
+      padding: 4rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+    }
+
+    .form-container {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 95%;
+      max-width: 600px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #facc15;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.8rem 0 0.3rem;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 8px;
+      background: #1e293b;
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .submit-btn {
+      background-color: #facc15;
+      color: #1e3a8a;
+      font-weight: bold;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      background-color: #fde047;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">CourseDash</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="data_charts.html">Data</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a class="active" href="#">Create</a></li>
+        <li><a href="read.html">Read</a></li>
+        <li><a href="update.html">Update</a></li>
+        <li><a href="delete.html">Delete</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Add New Student</h2>
+      <form>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="John" required>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="enrollment_year">Enrollment Year</label>
+        <input type="number" id="enrollment_year" name="enrollment_year" placeholder="2024" required>
+
+        <label for="course">Enroll In Course</label>
+        <select id="course" name="course">
+          <option value="">Select Course</option>
+          <option>Data Visualization</option>
+          <option>Big Data</option>
+          <option>Project Management</option>
+          <option>Advanced Statistics</option>
+          <option>Application Development</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
