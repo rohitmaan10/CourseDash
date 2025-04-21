@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Record | CourseDash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('/images/course.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .delete-section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .delete-box {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 3rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .delete-box h2 {
+      color: #facc15;
+      margin-bottom: 1rem;
+    }
+
+    .delete-box p {
+      color: #e2e8f0;
+      margin-bottom: 2rem;
+    }
+
+    .delete-box input {
+      padding: 0.7rem 1rem;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .delete-box button {
+      background-color: #ef4444;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .delete-box button:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">CourseDash</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="data_charts.html">Data</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="create.html">Create</a></li>
+        <li><a href="read.html">Read</a></li>
+        <li><a href="update.html">Update</a></li>
+        <li><a class="active" href="delete.html">Delete</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="delete-section">
+    <div class="delete-box">
+      <h2>Delete Student Enrollment</h2>
+      <p>Enter the Enrollment ID of the record you want to remove:</p>
+      <input type="text" placeholder="Enrollment ID">
+      <button>Delete Record</button>
+    </div>
+  </main>
+</body>
+</html>
